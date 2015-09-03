@@ -157,6 +157,8 @@ pairs_hash = Hash.new
   pairs_hash [20] [11] = Hash.new ("Stay!")
 
 
+
+
 if dealer_card >= 5 && dealer_card <= 8
   puts hard_hit_hash[sum][dealer_card]
 
@@ -189,6 +191,10 @@ second_card = gets.chomp
 if second_card == "A"
   second_card = 11.to_i
 else second_card = second_card.to_i
+end
+
+if first_card == second_card
+  puts pairs_hash[sum][dealer_card]
 end
 
 sum = (first_card + second_card)
